@@ -23,3 +23,6 @@ tar czf cleaned_"$name" "$noext"
 
 # move the tgz to the correct directory
 mv "$tmp_dir"/cleaned_"$name" "$here"
+
+# remove the tmp directory
+rm -r "$tmp_dir"
