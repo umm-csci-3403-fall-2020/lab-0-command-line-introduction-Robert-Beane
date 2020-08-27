@@ -18,7 +18,7 @@ tar xzf "$name" -C "$tmp_dir"
 grep "DELETE ME!" -rlZ "$tmp_dir" | xargs -0 rm
 
 # Compress the new, cleaned directory
-cd "$tmp_dir"
+cd "$tmp_dir" || exit
 tar czf cleaned_"$name" "$noext"
 
 # move the tgz to the correct directory
