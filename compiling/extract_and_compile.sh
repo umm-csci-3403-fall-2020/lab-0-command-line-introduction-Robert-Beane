@@ -5,6 +5,12 @@
 # Parameters
 number=$1
 
-tar xfz NthPrime.tgz 
-gcc NthPrime/main.c NthPrime/nth_prime.c -o NthPrime/NthPrime
-./NthPrime/NthPrime "$number"
+# extract the NthPrime function
+tar xfz NthPrime.tgz
+
+cd NthPrime/ # move to the NthPrime directory for easier calls
+# compile the NthPrime function
+gcc main.c nth_prime.c -o NthPrime
+
+# run the function with the given number
+./NthPrime "$number"
