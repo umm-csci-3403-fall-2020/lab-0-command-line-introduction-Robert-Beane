@@ -8,7 +8,7 @@ number=$1
 # extract the NthPrime function
 tar xfz NthPrime.tgz
 
-cd NthPrime/ # move to the NthPrime directory for easier calls
+cd NthPrime/ || exit # move to the NthPrime directory for easier calls
 # compile the NthPrime function
 gcc main.c nth_prime.c -o NthPrime
 
